@@ -1,0 +1,5 @@
+taskreader_api.user_all:
+    pattern:  /users.{_format}
+    defaults: { _controller: TaskReaderApiBundle:User:all, _format: ~ }
+    requirements:
+        _method: GET

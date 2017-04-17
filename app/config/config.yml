@@ -77,3 +77,19 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+fos_rest:
+    view:
+        view_response_listener: force
+    format_listener:
+        enabled: true
+
+sensio_framework_extra:
+    view:    { annotations: false }
+
+jms_serializer:
+    metadata:
+        directories:
+            CoreDomain:
+                namespace_prefix: "TaskReader\\CoreDomain"
+                path: "@TaskReaderApiBundle/Resources/config/serializer/"

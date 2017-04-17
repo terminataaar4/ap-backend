@@ -1,0 +1,12 @@
+TaskReader\CoreDomain\User\User:
+    exclusion_policy: ALL
+    properties:
+        id:
+            expose: true
+            inline: true
+        email:
+            expose: true
+            serialized_name: email
+        password:
+            expose: true
+            serialized_name: password
