@@ -15,4 +15,9 @@ class UserId
     {
         return $this->value;
     }
+
+    public function isEqualTo(UserId $userId)
+    {
+        return $this->getValue() === $userId->getValue();
+    }
 }

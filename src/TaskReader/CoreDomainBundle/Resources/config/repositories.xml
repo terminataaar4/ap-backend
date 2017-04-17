@@ -5,13 +5,17 @@
 
 	<parameters>
 		<parameter key="user_repository.in_memory.class">TaskReader\CoreDomainBundle\Repository\InMemoryUserRepository</parameter>
+		<parameter key="user_repository.yaml.class">TaskReader\CoreDomainBundle\Repository\YamlUserRepository</parameter>
 	</parameters>
 
 	<services>
 		<!-- Exposed Services -->
-		<service id="user_repository" alias="user_repository.in_memory"></service>
+		<service id="user_repository" alias="user_repository.yaml"></service>
 
-		<!-- Concrete Implementations -->
 		<service id="user_repository.in_memory" public="false" class="%user_repository.in_memory.class%"></service>
+
+        <service id="user_repository.yaml" class="%user_repository.yaml.class%" public="false">
+            <argument>%kernel.cache_dir%/users.yml</argument>
+        </service>
 	</services>
 </container>

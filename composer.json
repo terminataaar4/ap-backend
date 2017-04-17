@@ -25,7 +25,9 @@
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",
-        "symfony/phpunit-bridge": "~2.7"
+        "symfony/phpunit-bridge": "~2.7",
+        "willdurand/rest-extra-bundle": "^1.2",
+        "mikey179/vfsStream": "^1.6"
     },
     "scripts": {
         "symfony-scripts": [
